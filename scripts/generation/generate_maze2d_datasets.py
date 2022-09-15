@@ -7,7 +7,7 @@ import pickle
 import gzip
 import h5py
 import argparse
-
+from tqdm import tqdm
 
 def reset_data():
     return {'observations': [],
@@ -41,7 +41,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--render', action='store_true', help='Render trajectories')
     parser.add_argument('--noisy', action='store_true', help='Noisy actions')
-    parser.add_argument('--env_name', type=str, default='maze2d-umaze-v1', help='Maze type')
+    parser.add_argument('--env_name', type=str, default='maze2d-large-v1', help='Maze type')
     parser.add_argument('--num_samples', type=int, default=int(1e6), help='Num samples to collect')
     args = parser.parse_args()
 
@@ -59,7 +59,7 @@ def main():
 
     data = reset_data()
     ts = 0
-    for _ in range(args.num_samples):
+    for _ in tqdm(range(args.num_samples)):
         position = s[0:2]
         velocity = s[2:4]
         act, done = controller.get_action(position, velocity, env._target)
@@ -73,8 +73,8 @@ def main():
 
         ns, _, _, _ = env.step(act)
 
-        if len(data['observations']) % 10000 == 0:
-            print(len(data['observations']))
+        # if len(data['observations']) % 10000 == 0:
+        #     print(len(data['observations']))
 
         ts += 1
         if done:

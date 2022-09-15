@@ -1,4 +1,4 @@
-from .maze_model import MazeEnv, OPEN, U_MAZE, MEDIUM_MAZE, LARGE_MAZE, U_MAZE_EVAL, MEDIUM_MAZE_EVAL, LARGE_MAZE_EVAL
+from .maze_model import MazeEnv, OPEN, U_MAZE, MEDIUM_MAZE, LARGE_MAZE, U_MAZE_EVAL, MEDIUM_MAZE_EVAL, LARGE_MAZE_EVAL, LARGE_MAZE_1, LARGE_MAZE_2, LARGE_MAZE_3, LARGE_MAZE_4
 from gym.envs.registration import register
 
 register(
@@ -93,7 +93,7 @@ register(
     entry_point='d4rl.pointmaze:MazeEnv',
     max_episode_steps=800,
     kwargs={
-        'maze_spec':LARGE_MAZE,
+        'maze_spec':LARGE_MAZE_1,
         'reward_type':'sparse',
         'reset_target': False,
         'ref_min_score': 6.7,
@@ -103,16 +103,44 @@ register(
 )
 
 register(
-    id='maze2d-eval-umaze-v1',
+    id='maze2d-large-v2',
     entry_point='d4rl.pointmaze:MazeEnv',
-    max_episode_steps=300,
+    max_episode_steps=800,
     kwargs={
-        'maze_spec':U_MAZE_EVAL,
+        'maze_spec':LARGE_MAZE_2,
         'reward_type':'sparse',
         'reset_target': False,
-        'ref_min_score': 36.63,
-        'ref_max_score': 141.4,
-        'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/maze2d/maze2d-eval-umaze-sparse-v1.hdf5'
+        'ref_min_score': 6.7,
+        'ref_max_score': 273.99,
+        'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/maze2d/maze2d-large-sparse-v1.hdf5'
+    }
+)
+
+register(
+    id='maze2d-large-v3',
+    entry_point='d4rl.pointmaze:MazeEnv',
+    max_episode_steps=800,
+    kwargs={
+        'maze_spec':LARGE_MAZE_3,
+        'reward_type':'sparse',
+        'reset_target': False,
+        'ref_min_score': 6.7,
+        'ref_max_score': 273.99,
+        'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/maze2d/maze2d-large-sparse-v1.hdf5'
+    }
+)
+
+register(
+    id='maze2d-large-v4',
+    entry_point='d4rl.pointmaze:MazeEnv',
+    max_episode_steps=800,
+    kwargs={
+        'maze_spec':LARGE_MAZE_4,
+        'reward_type':'sparse',
+        'reset_target': False,
+        'ref_min_score': 6.7,
+        'ref_max_score': 273.99,
+        'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/maze2d/maze2d-large-sparse-v1.hdf5'
     }
 )
 

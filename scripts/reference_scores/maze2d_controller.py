@@ -8,7 +8,7 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--env_name', type=str, default='maze2d-umaze-v0', help='Maze type. small or default')
+    parser.add_argument('--env_name', type=str, default='maze2d-large-v1', help='Maze type. small or default')
     parser.add_argument('--num_episodes', type=int, default=100, help='Num samples to collect')
     args = parser.parse_args()
 
