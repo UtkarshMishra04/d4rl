@@ -94,10 +94,10 @@ LARGE_MAZE_1 = \
 
 LARGE_MAZE_2 = \
     "############\\"+\
-    "#OOOO#OOOOO#\\"+\
-    "#O####O#O#O#\\"+\
-    "#OOOOOO#OOO#\\"+\
-    "#O##O#O###O#\\"+\
+    "#O##OOOOOOO#\\"+\
+    "#OOOO#O#O#O#\\"+\
+    "######O###O#\\"+\
+    "#OOOO#O#O#O#\\"+\
     "#OO#O#OOOOO#\\"+\
     "##O#O#O#O###\\"+\
     "#OO#OOO#OGO#\\"+\

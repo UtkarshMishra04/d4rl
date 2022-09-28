@@ -98,7 +98,7 @@ register(
         'reset_target': False,
         'ref_min_score': 6.7,
         'ref_max_score': 273.99,
-        'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/maze2d/maze2d-large-sparse-v1.hdf5'
+        'dataset_url':'https://github.com/UtkarshMishra04/d4rl/blob/d4rl/maze2d-large-v1.hdf5'
     }
 )
 
@@ -112,7 +112,7 @@ register(
         'reset_target': False,
         'ref_min_score': 6.7,
         'ref_max_score': 273.99,
-        'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/maze2d/maze2d-large-sparse-v1.hdf5'
+        'dataset_url':'https://github.com/UtkarshMishra04/d4rl/blob/d4rl/maze2d-large-v2.hdf5'
     }
 )
 
@@ -126,7 +126,7 @@ register(
         'reset_target': False,
         'ref_min_score': 6.7,
         'ref_max_score': 273.99,
-        'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/maze2d/maze2d-large-sparse-v1.hdf5'
+        'dataset_url':'https://github.com/UtkarshMishra04/d4rl/blob/d4rl/maze2d-large-v3.hdf5'
     }
 )
 
@@ -140,7 +140,7 @@ register(
         'reset_target': False,
         'ref_min_score': 6.7,
         'ref_max_score': 273.99,
-        'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/maze2d/maze2d-large-sparse-v1.hdf5'
+        'dataset_url':'https://github.com/UtkarshMishra04/d4rl/blob/d4rl/maze2d-large-v4.hdf5'
     }
 )
 
